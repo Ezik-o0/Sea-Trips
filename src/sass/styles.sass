@@ -1,0 +1,101 @@
+@import helpers/vars
+@import helpers/mixins
+
+html
+    font-size: 16px
+
+body
+    font-size: 14rem
+    margin-top: -20px
+    font-family: "Rubik"
+    font-weight: 500
+    background: #f5f8fa !important
+
+.flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+.wrapper
+    margin: auto 
+    max-width: 1900px
+    width: 90%
+
+* 
+    margin: 0
+    padding: 0
+
+
+@import components/header
+
+
+// Main styles hore
+
+.container
+    margin: 45px 0 70px
+
+// .row
+//     margin: 85px 0
+
+.card:hover 
+    background: #fff !important
+    
+.card-picture
+    padding: 30px 20px
+
+.card-picture__picture
+    width: 53px
+    height: 53px
+
+.picture
+    width: 100%
+    height: 100%
+
+.description__detail
+    border: 1px solid
+
+.banner-description__sprite
+    width: 45px
+    height: 40px
+
+.banner-description__img
+    width: 85px
+    height: 85px
+
+.banner-main 
+    background: linear-gradient(90deg, rgba(20,47,63,0.8) 100%, rgba(0,212,255,1) 100%, rgba(20,53,63,1) 100%), url(../img/baner-main.webp)
+    background-size: cover 
+
+.banner-info,
+.banner-description
+    margin: 150px 0
+
+.banner-description__name
+    width: 100%
+
+.info__sprite
+    width: 11px
+    height: 7px
+    
+.card__price 
+    display: inline-block
+    min-width: 95px
+
+.card__link
+    min-width: 115px
+
+.banner-description__imgg 
+    width: 45px
+    height: 40px
+
+.card-info__title 
+    font-size: 18px
+
+.card-info__prices
+    font-size: 24px
+
+.card-info__description
+    font-size: 13px
+
+@import components/footer

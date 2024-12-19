@@ -1,0 +1,126 @@
+//- Home page
+
+extends templates/layout 
+
+block seo 
+    //- SEO content
+
+block content 
+    //- Main content 
+    main.main 
+        div.cointainer-card
+            div.container.border-bottom
+                div.row
+                    div.col
+                        div.section
+                            section.about-company
+                                h2.about-company__title.text-uppercase.text-secondary-emphasis.mb-3.fs-2 Про нашу компанію 
+                                i.about-company__description.text-dark-emphasis Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень! 
+                                br
+                                button.about-company__button.text-uppercase.text-light.border-0.rounded-pill.px-4.py-1.bg-warning.mt-5.mb-3 детальніше
+                                span.about-company__info.text-body-tertiary.d-inline-flex.fs-6 * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                    +infoCompany(
+                        "../img/bike.png",
+                        "Bike",
+                        "Тур на велосипедах",
+                        "335 грн*",
+                        "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод."
+                    )
+                    +infoCompany(
+                        "../img/island-svg.png",
+                        "Bike",
+                        "Екскурсія на острів", 
+                        "500 грн*",
+                        "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року ."
+                    )
+                    +infoCompany(
+                        "../img/order-svg.png",
+                        "Bike",
+                        "Особливе замовлення", 
+                        "250 грн.*", 
+                        "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші."
+                    )
+                    div.row 
+                        div.col-9
+                            p.card__text.text-primary дивитись усі плани 
+                                svg.card__sprite(width="17", height="18") 
+                                    use(xlink:href="#arrow-right")
+        div.cointainer-info 
+            div.container   
+                div.row 
+                    div.col-12.col-sm-12.col-md-5.col-lg-4.col-xl-4
+                        div.picture 
+                            img.picture__island(src="img/island.png", alt="Остірв")
+                    div.col-12.col-sm-12.col-md-7.col-lg-8.min-vw-50
+                        div.title 
+                            h2.title__info.text-uppercase.text-success-emphasis Дивовижний безлюдний острів, який зводить людей з розуму 
+                        div.row
+                            div.col-12.col-sm-7.col-lg-7.col-xl-7
+                                div.description 
+                                    i.description__info.text-success-emphasis.d-inline-flex Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                    button.description__order.text-uppercase.text-light.border-0.rounded-pill.px-3.py-1.bg-warning.mt-4.me-2 замовити тур
+                                    button.description__detail.text-uppercase.text-info.bg-light-subtle.border-info.rounded-pill.px-3.py-1.mt-4 детальніше
+                            .col-12.col-sm-5.col-lg-5.col-xl-5
+                                div.prices.text-center.bg-body-secondary.p-4
+                                    span.prices__info.text-info.fs-3 575 грн./день
+                                    p.prices__description.text-secondary.m-0 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+        div.banner-main 
+            div.container
+                div.row
+                    div.col 
+                        div.banner-info
+                            h2.banner-info__title.text-uppercase.text-light Спіймай хвилю
+                            h2.banner-info__title.text-uppercase.text-info Живи яскраво!
+                            p.banner-info__description.text-light.pt-3 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером! 
+                            button.banner-info__button.text-uppercase.text-light.border-0.rounded-pill.px-4.py-1.bg-warning.mt-3 детальніше 
+                    div.col     
+                        div.banner-description.p-4
+                            div.text-center.pb-3
+                                img.banner-description__imgg(src="img/forma.png", alt="")
+                            i.banner-description__info.d-inline-flex.text-light Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                            span.banner-description__name.d-inline-flex.text-light.justify-content-center.pt-2 Олег Набережний
+                            span.banner-description__client.text-secondary.justify-content-center.d-flex клієнт
+                            div.text-center
+                                img.banner-description__img(src="img/man.png", alt="")
+        div.card-section.d-flex.justify-content-center
+            section.card-offers.text-center
+                h2.card-offers__title.text-uppercase.text-success-emphasis Спеціальні пропозиції тижня
+                i.card-offers__inf.text-success-emphasis Гарячі праозиції, по-швидше обирай і поїхали! 
+        div.container.mt-2.border-bottom
+            div.row
+                +card(
+                    "../img/pair.jpg",
+                    "Поджуня пара на отсрові",
+                    "Романтична подорож на 2", 
+                    "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+                    "2599 грн.",
+                    "замовити",
+                    "#"
+                ) 
+                +card(
+                    "../img/bike-tour.jpg",
+                    "Чоловік стоїть на скелі з велесопедом",
+                    "Велотур", 
+                    "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+                    "555 грн.",
+                    "замовити",
+                    "#"
+                ) 
+                +card(
+                    "../img/islands.jpg",
+                    "Отсрів, пальми, море",
+                    "На острови!", 
+                    "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+                    "1559 грн.",
+                    "замовити",
+                    "#"
+                )
+                +card(
+                    "../img/surfing.jpg",
+                    "Дівчина з сьорфінгом в руці",
+                    "Катання на сьорфінгу", 
+                    "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+                    "999 грн",
+                    "замовити",
+                    "#"
+                )

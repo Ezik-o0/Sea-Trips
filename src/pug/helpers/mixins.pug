@@ -1,0 +1,24 @@
+//- Mixins 
+
+mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref) 
+    div.col
+        div.card.w-20.border-0.bg-transparent
+            img.card-img-top(src=imageSrc, alt=imageAlt)
+            div.card-body
+                h5.card__title.text-success-emphasis= title
+                p.card__description.text-secondary= description
+                div.div.d-flex.justify-content-between.align-items-end.gap-2
+                    span.card__price.text-primary.fs-4= price
+                    a.card__link.text-warning.text-decoration-none.text-uppercase(href=linkHref)= buttonText
+                        svg.card__sprite.ms-2(width="17", height="18")
+                            use(xlink:href="#arrow-right")
+
+mixin infoCompany(imageSrc, imageAlt, title, price, description)
+    div.col-12.col-sm-6.col-lg-4.col-xl-3.text-center 
+        div.card.border-0.bg-transparent.m-0 
+            figure.card-picture.m-0  
+                img.card-picture__picture(src=imageSrc, alt=imageAlt)
+                figcaption.card-info.m-0 
+                    h3.card-info__title.text-success-emphasis.mt-4.mb-1= title
+                    span.card-info__prices.text-info.fs-3= price
+                    p.card-info__description.text-secondary.text-start.mt-1.m-0= description

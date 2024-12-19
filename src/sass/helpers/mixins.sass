@@ -1,0 +1,60 @@
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content
+
++media(320)
+    .travel-plan
+        margin-top: 220px
+
+    .card
+        margin: 30px 0
+
+    .picture__island
+        max-width: 100%
+        max-height: 100%
+
+    .prices,
+    .description
+        margin: 10px 0 0
+
+    .row
+        margin: 30px 0
+
++media(375)
+    .travel-plan
+        margin-top: 230px
+
++media(425)
+    // .travel-plan
+    //     margin-top: 230px
+
++media(470)
+    .picture__island
+        min-width: 100%
+        min-height: 280px
+    
+    // .card__price 
+    //     width: 100%
+    //     display: flex
+
++media(500)
+    .travel-plan
+        margin-top: 290px
+
+// +media(600)
+//     .picture 
+//         align-items: center
+
++media(1200)
+    .picture__island
+        width: 300px
+        height: 250px
+
+    // .card__price 
+    //     width: 45%
+    //     display: block
+
++media(1440)
+    .picture__island
+        width: 300px
+        height: 250px
