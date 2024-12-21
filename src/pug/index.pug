@@ -20,21 +20,21 @@ block content
                                 button.about-company__button.text-uppercase.text-light.border-0.rounded-pill.px-4.py-1.bg-warning.mt-5.mb-3 детальніше
                                 span.about-company__info.text-body-tertiary.d-inline-flex.fs-6 * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     +infoCompany(
-                        "img/bike.png",
+                        "../img/bike.png",
                         "Bike",
                         "Тур на велосипедах",
                         "335 грн*",
                         "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод."
                     )
                     +infoCompany(
-                        "img/island-svg.png",
+                        "../img/island-svg.png",
                         "Bike",
                         "Екскурсія на острів", 
                         "500 грн*",
                         "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року ."
                     )
                     +infoCompany(
-                        "img/order-svg.png",
+                        "../img/order-svg.png",
                         "Bike",
                         "Особливе замовлення", 
                         "250 грн.*", 
@@ -124,3 +124,28 @@ block content
                     "замовити",
                     "#"
                 )
+        div.additional-info 
+            div.container 
+                div.row 
+                    div.col 
+                        h2.additional-info__title.text-uppercase.fs-2.text-success-emphasis додаткова інформація 
+                    +additionalInfo(
+                        "Графік роботи готелів.xls", 
+                        "Розмір файла: 10Mb", 
+                        "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
+                        "скачати"
+                    ) 
+                    +additionalInfo(
+                        "Інформація про харчування.xls",
+                        "Розмір файла: 10Mb", 
+                        "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
+                        "скачати"
+                    )
+                    div.col.text-center
+                        div.question-info.d-inline-block 
+                            h3.question-info__title.fs-6.text-success-emphasis задати питання 
+                            p.question-info__description.m-0.text-secondary.lh-1.pt-3.pb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
+                            a.question-info__phone.text-info.text-decoration-none.fs-5(href="tel:+380505698511") +38 (050) 56 98 511 
+                            p.question-info__name-info.m-0.text-success-emphasis.pt-3 Анна Миколаївна 
+                            span.question-info__span.text-secondary.d-block консультант 
+                            img(src="../img/woman.png", alt="Жінка")

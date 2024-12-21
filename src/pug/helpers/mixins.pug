@@ -21,4 +21,20 @@ mixin infoCompany(imageSrc, imageAlt, title, price, description)
                 figcaption.card-info.m-0 
                     h3.card-info__title.text-success-emphasis.mt-4.mb-1= title
                     span.card-info__prices.text-info.fs-3= price
-                    p.card-info__description.text-secondary.text-start.mt-1.m-0= description
+                    p.card-info__description.text-secondary.text-start.mt-1.m-0= description 
+
+mixin additionalInfo(title, span, description, download) 
+    div.col 
+        figure.card-file.p-3.card-line
+            div.card-flex.d-flex
+                div.card-file__flex
+                    svg.card-file__svg 
+                        use(xlink:href="#file") 
+                div.card-file__flex
+                    h5.card-file__title.text-white.fs-5= title
+                    span.card-file__span.text-light.text-secondary= span
+            figcaption.card-file__info 
+                p.card-file__description.text-light= description
+                a.card-file__download(href="#")= download 
+                    svg.card-file-download__svg
+                        url(xlink:href="#arrow-right") 
