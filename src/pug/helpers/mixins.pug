@@ -8,33 +8,34 @@ mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref)
                 h5.card__title.text-success-emphasis= title
                 p.card__description.text-secondary= description
                 div.div.d-flex.justify-content-between.align-items-end.gap-2
-                    span.card__price.text-primary.fs-4= price
+                    span.card__price.fs-4= price
                     a.card__link.text-warning.text-decoration-none.text-uppercase(href=linkHref)= buttonText
-                        svg.card__sprite.ms-2(width="17", height="18")
+                        svg.card__svg.ms-2(width="17", height="18")
                             use(xlink:href="#arrow-right")
 
 mixin infoCompany(imageSrc, imageAlt, title, price, description)
     div.col-12.col-sm-6.col-lg-4.col-xl-3.text-center 
         div.card.border-0.bg-transparent.m-0 
-            figure.card-picture.m-0  
+            figure.card-picture
                 img.card-picture__picture(src=imageSrc, alt=imageAlt)
                 figcaption.card-info.m-0 
                     h3.card-info__title.text-success-emphasis.mt-4.mb-1= title
-                    span.card-info__prices.text-info.fs-3= price
+                    span.card-info__prices.fs-3= price
                     p.card-info__description.text-secondary.text-start.mt-1.m-0= description 
 
-mixin additionalInfo(title, span, description, download) 
+mixin additionalInfo(title, span, description, download, active) 
     div.col 
-        figure.card-file.p-3.card-line
+        figure.card-file.m-0
             div.card-flex.d-flex
                 div.card-file__flex
                     svg.card-file__svg 
                         use(xlink:href="#file") 
-                div.card-file__flex
+                div.card-file__flex.ps-3
                     h5.card-file__title.text-white.fs-5= title
-                    span.card-file__span.text-light.text-secondary= span
+                    span.card-file__span= span
             figcaption.card-file__info 
-                p.card-file__description.text-light= description
-                a.card-file__download(href="#")= download 
+                p.card-file__description.text-light.m-0= description
+                div.card-file__link
                     svg.card-file-download__svg
-                        url(xlink:href="#arrow-right") 
+                        use(xlink:href="#download-outline") 
+                    a.card-file__download.text-decoration-none.text-uppercase(href="#")= download 

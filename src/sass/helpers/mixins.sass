@@ -3,8 +3,8 @@
         @content
 
 +media(320)
-    .travel-plan
-        margin-top: 220px
+    .sea-adventures__title
+        font-size: 40px
 
     .card
         margin: 30px 0
@@ -20,41 +20,50 @@
     .row
         margin: 30px 0
 
-+media(375)
-    .travel-plan
-        margin-top: 230px
++media(994)
+    .description__order,
+    .description__detail 
+        padding: 10px 30px
 
-+media(425)
-    // .travel-plan
-    //     margin-top: 230px
+    .banner-description
+        margin: 110px 0 110px 70px
 
 +media(470)
+    .sea-adventures__span::before,
+    .sea-adventures__span::after
+        display: block
+
+    .sea-adventures__title
+        font-size: 72px
+
     .picture__island
         min-width: 100%
         min-height: 280px
-    
-    // .card__price 
-    //     width: 100%
-    //     display: flex
 
-+media(500)
-    .travel-plan
-        margin-top: 290px
-
-// +media(600)
-//     .picture 
-//         align-items: center
++media(550)
+    .banner-description::before,
+    .banner-description::after
+        display: block
 
 +media(1200)
+    .description__order,
+    .description__detail 
+        padding: 10px 38px
+
+    .card-picture 
+        margin: 0 
+
+    .prices
+        padding: 15px 55px
+
     .picture__island
         width: 300px
-        height: 250px
+        height: 200px
 
-    // .card__price 
-    //     width: 45%
-    //     display: block
++media(1400)
+    .prices 
+        padding: 30px 55px
 
-+media(1440)
     .picture__island
         width: 300px
         height: 250px

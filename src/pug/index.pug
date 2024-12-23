@@ -10,14 +10,14 @@ block content
     main.main 
         div.cointainer-card
             div.container.border-bottom
-                div.row
+                div.row.m-0
                     div.col
                         div.section
                             section.about-company
                                 h2.about-company__title.text-uppercase.text-secondary-emphasis.mb-3.fs-2 Про нашу компанію 
                                 i.about-company__description.text-dark-emphasis Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень! 
                                 br
-                                button.about-company__button.text-uppercase.text-light.border-0.rounded-pill.px-4.py-1.bg-warning.mt-5.mb-3 детальніше
+                                button.about-company__button.text-uppercase.rounded-pill.mt-5.mb-3 детальніше
                                 span.about-company__info.text-body-tertiary.d-inline-flex.fs-6 * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     +infoCompany(
                         "img/bike.png",
@@ -40,11 +40,11 @@ block content
                         "250 грн.*", 
                         "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші."
                     )
-                    div.row 
-                        div.col-9
-                            p.card__text.text-primary дивитись усі плани 
-                                svg.card__sprite(width="17", height="18") 
-                                    use(xlink:href="#arrow-right")
+                div.row 
+                    div.col-12.col-xl-9.offset-xl-3.text-center
+                        p.card__text дивитись усі плани 
+                            svg.card__sprite(width="17", height="18") 
+                                use(xlink:href="#arrow-right")
         div.cointainer-info 
             div.container   
                 div.row 
@@ -53,28 +53,28 @@ block content
                             img.picture__island(src="img/island.png", alt="Остірв")
                     div.col-12.col-sm-12.col-md-7.col-lg-8.min-vw-50
                         div.title 
-                            h2.title__info.text-uppercase.text-success-emphasis Дивовижний безлюдний острів, який зводить людей з розуму 
+                            h2.title__info.text-uppercase.text-success-emphasis.fs-1 Дивовижний безлюдний острів, який зводить людей з розуму 
                         div.row
-                            div.col-12.col-sm-7.col-lg-7.col-xl-7
+                            div.col-12.col-sm-12.col-lg-7.col-xl-7
                                 div.description 
                                     i.description__info.text-success-emphasis.d-inline-flex Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
-                                    button.description__order.text-uppercase.text-light.border-0.rounded-pill.px-3.py-1.bg-warning.mt-4.me-2 замовити тур
-                                    button.description__detail.text-uppercase.text-info.bg-light-subtle.border-info.rounded-pill.px-3.py-1.mt-4 детальніше
-                            .col-12.col-sm-5.col-lg-5.col-xl-5
-                                div.prices.text-center.bg-body-secondary.p-4
-                                    span.prices__info.text-info.fs-3 575 грн./день
+                                    button.description__order.text-uppercase.rounded-pill.mt-4.me-2 замовити тур
+                                    button.description__detail.text-uppercase.rounded-pill.mt-4 детальніше
+                            .col-12.col-sm-12.col-lg-5.col-xl-5
+                                div.prices.text-center.bg-body-secondary
+                                    span.prices__info.fs-3 575 грн./день
                                     p.prices__description.text-secondary.m-0 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
         div.banner-main 
             div.container
                 div.row
-                    div.col 
+                    div.col-12.col-sm-12.col-lg-6
                         div.banner-info
                             h2.banner-info__title.text-uppercase.text-light Спіймай хвилю
                             h2.banner-info__title.text-uppercase.text-info Живи яскраво!
                             p.banner-info__description.text-light.pt-3 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером! 
-                            button.banner-info__button.text-uppercase.text-light.border-0.rounded-pill.px-4.py-1.bg-warning.mt-3 детальніше 
-                    div.col     
-                        div.banner-description.p-4
+                            button.banner-info__button.text-uppercase.rounded-pill.mt-3 детальніше 
+                    div.col-12.col-sm-12.col-lg-6
+                        div.banner-description.p-5
                             div.text-center.pb-3
                                 img.banner-description__imgg(src="img/forma.png", alt="")
                             i.banner-description__info.d-inline-flex.text-light Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
