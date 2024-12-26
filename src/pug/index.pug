@@ -24,21 +24,24 @@ block content
                         "Bike",
                         "Тур на велосипедах",
                         "335 грн*",
-                        "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод."
+                        "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+                        false
                     )
                     +infoCompany(
                         "img/island-svg.png",
                         "Bike",
                         "Екскурсія на острів", 
                         "500 грн*",
-                        "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року ."
+                        "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+                        true
                     )
                     +infoCompany(
                         "img/order-svg.png",
                         "Bike",
                         "Особливе замовлення", 
                         "250 грн.*", 
-                        "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші."
+                        "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.",
+                        true
                     )
                 div.row 
                     div.col-12.col-xl-9.offset-xl-3.text-center
@@ -74,7 +77,7 @@ block content
                             p.banner-info__description.text-light.pt-3 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером! 
                             button.banner-info__button.text-uppercase.rounded-pill.mt-3 детальніше 
                     div.col-12.col-sm-12.col-lg-6
-                        div.banner-description.p-5
+                        div.banner-description
                             div.text-center.pb-3
                                 img.banner-description__imgg(src="img/forma.png", alt="")
                             i.banner-description__info.d-inline-flex.text-light Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
@@ -127,7 +130,7 @@ block content
         div.additional-info 
             div.container 
                 div.row 
-                    div.col 
+                    div.col.mt-5 
                         h2.additional-info__title.text-uppercase.fs-2.text-success-emphasis додаткова інформація 
                     +additionalInfo(
                         "Графік роботи готелів.xls", 
@@ -141,11 +144,11 @@ block content
                         "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
                         "скачати"
                     )
-                    div.col.text-center
+                    div.col-12.col-sm-5.col-lg-3.text-center.mt-5
                         div.question-info.d-inline-block 
                             h3.question-info__title.fs-6.text-success-emphasis задати питання 
-                            p.question-info__description.m-0.text-secondary.lh-1.pt-3.pb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
-                            a.question-info__phone.text-info.text-decoration-none.fs-5(href="tel:+380505698511") +38 (050) 56 98 511 
+                            p.question-info__description.m-0.text-secondary.pt-3.pb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
+                            a.question-info__phone.text-info.text-decoration-none(href="tel:+380505698511") +38 (050) 56 98 511 
                             p.question-info__name-info.m-0.text-success-emphasis.pt-3 Анна Миколаївна 
                             span.question-info__span.text-secondary.d-block консультант 
                             img(src="img/woman.png", alt="Жінка")

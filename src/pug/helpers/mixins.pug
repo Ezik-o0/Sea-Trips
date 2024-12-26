@@ -1,7 +1,7 @@
 //- Mixins 
 
 mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref) 
-    div.col
+    div.col-12.col-sm-6.col-lg-4.col-xl-3
         div.card.w-20.border-0.bg-transparent
             img.card-img-top(src=imageSrc, alt=imageAlt)
             div.card-body
@@ -13,18 +13,18 @@ mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref)
                         svg.card__svg.ms-2(width="17", height="18")
                             use(xlink:href="#arrow-right")
 
-mixin infoCompany(imageSrc, imageAlt, title, price, description)
-    div.col-12.col-sm-6.col-lg-4.col-xl-3.text-center 
-        div.card.border-0.bg-transparent.m-0 
-            figure.card-picture
+mixin infoCompany(imageSrc, imageAlt, title, price, description, hasImage)
+    div.col-12.col-sm-6.col-lg-4.col-xl-3.text-center
+        div.card.border-0.bg-transparent.m-0
+            figure.card-picture(class=!hasImage ? 'no-image' : '')
                 img.card-picture__picture(src=imageSrc, alt=imageAlt)
-                figcaption.card-info.m-0 
+                figcaption.card-info.m-0
                     h3.card-info__title.text-success-emphasis.mt-4.mb-1= title
                     span.card-info__prices.fs-3= price
-                    p.card-info__description.text-secondary.text-start.mt-1.m-0= description 
+                    p.card-info__description.text-secondary.text-start.mt-1.m-0= description
 
 mixin additionalInfo(title, span, description, download, active) 
-    div.col 
+    div.col-12.col-sm-7.col-lg-4.col-xl-3.mt-5
         figure.card-file.m-0
             div.card-flex.d-flex
                 div.card-file__flex

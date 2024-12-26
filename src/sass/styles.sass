@@ -65,11 +65,14 @@ body
     background: #fff !important
     
 .card-picture
-    margin: 25px 0 0
-    position: relative
     padding: 30px 20px
 
-.card-picture::before
+.card-picture,
+.card-body
+    position: relative
+
+.card-picture::before,
+.card-body::bofore
     content: ''
     position: absolute
     top: 0 
@@ -81,7 +84,8 @@ body
     border-bottom: 30px solid transparent
     border-left: 30px solid #26cb15
 
-.card-picture::after
+.card-picture::after,
+.card-body::after
     content: ''
     position: absolute
     top: 0
@@ -89,7 +93,12 @@ body
     width: 17px
     height: 16px
     background-image: url(../img/star.png)
+    background-repeat: no-repeat
     transform: translate(50%, 50%)
+
+.card-picture.no-image::before,
+.card-picture.no-image::after
+    content: none
 
 .card-picture__picture
     width: 53px
@@ -211,9 +220,6 @@ body
     background-image: url(../img/star.png)
     transform: translate(50%, 50%)
 
-.question-info__description 
-    width: 160px
-
 .card-file__svg 
     fill: #ffb700
     width: 50px
@@ -221,7 +227,7 @@ body
 
 .card-file
     padding: 30px 20px
-    height: 320px
+    height: 280px
     background-position: center
     background: linear-gradient(90deg, rgba(20,47,63,0.6) 100%, rgba(0,212,255,1) 100%, rgba(20,53,63,1) 100%), url(../img/info-food.jpg)
 
@@ -230,6 +236,7 @@ body
     font-size: 13px
     
 .card-file__description 
+    height: 100px
     padding-top: 20px
     line-height: 19px
     color: #fefefe
@@ -242,6 +249,7 @@ body
     color: #ffb700
 
 .card-file__link
+    margin: 20px 0 0
     display: inline-block 
     padding: 0 20px 2px
     border: 2px solid #ffb700
@@ -251,5 +259,42 @@ body
     padding-right: 5px
     width: 15px
     height: 10px
+
+.question-info__description,
+.question-info__span
+    font-size: 13px
+    line-height: 16px
+    width: 160px
+
+.question-info__phone 
+    font-size: 18px
+    line-height: 26px
+    color: #0099ff
+
+.question-info__name-info 
+    font-size: 18px
+
+.question-info 
+    position: relative
+
+.question-info::before
+    content: '' 
+    position: absolute
+    top: 10px
+    left: -45px
+    height: 270px
+    width: 50px
+    border: 4px solid $color-write
+    border-right: none
+
+.question-info::after
+    content: '' 
+    position: absolute
+    top: 10px 
+    right: -45px
+    height: 270px
+    width: 50px
+    border: 4px solid $color-write
+    border-left: none
 
 @import components/footer

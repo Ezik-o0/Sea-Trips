@@ -20,6 +20,12 @@
     .row
         margin: 30px 0
 
+    .banner-description
+        width: 100%
+
+    .card-file
+        margin-top: 20px
+
 +media(994)
     .description__order,
     .description__detail 
@@ -41,17 +47,24 @@
         min-height: 280px
 
 +media(550)
+    .banner-description 
+        padding: 45px
+
     .banner-description::before,
     .banner-description::after
         display: block
+
++media(1000)
+    .banner-description 
+        width: 90%
 
 +media(1200)
     .description__order,
     .description__detail 
         padding: 10px 38px
 
-    .card-picture 
-        margin: 0 
+    .card 
+        margin-top: 0
 
     .prices
         padding: 15px 55px
