@@ -1,9 +1,9 @@
 //- Mixins 
 
-mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref) 
+mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref, special, border) 
     div.col-12.col-sm-6.col-lg-4.col-xl-3
-        div.card.w-20.border-0.bg-transparent
-            img.card-img-top(src=imageSrc, alt=imageAlt)
+        div.card.w-20.border-0.bg-transparent(class= special ? 'special' : '')
+            img.card__lg.card-img-top(src=imageSrc, alt=imageAlt, class= border ? 'border' : '')
             div.card-body
                 h5.card__title.text-success-emphasis= title
                 p.card__description.text-secondary= description
@@ -13,19 +13,19 @@ mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref)
                         svg.card__svg.ms-2(width="17", height="18")
                             use(xlink:href="#arrow-right")
 
-mixin infoCompany(imageSrc, imageAlt, title, price, description, hasImage)
+mixin infoCompany(imageSrc, imageAlt, title, price, description, special)
     div.col-12.col-sm-6.col-lg-4.col-xl-3.text-center
-        div.card.border-0.bg-transparent.m-0
-            figure.card-picture(class=!hasImage ? 'no-image' : '')
+        div.card.border-0.bg-transparent.mt-3(class= special ? 'special' : '')
+            figure.card-picture
                 img.card-picture__picture(src=imageSrc, alt=imageAlt)
                 figcaption.card-info.m-0
                     h3.card-info__title.text-success-emphasis.mt-4.mb-1= title
                     span.card-info__prices.fs-3= price
                     p.card-info__description.text-secondary.text-start.mt-1.m-0= description
 
-mixin additionalInfo(title, span, description, download, active) 
+mixin additionalInfo(bgImage, title, span, description, download) 
     div.col-12.col-sm-7.col-lg-4.col-xl-3.mt-5
-        figure.card-file.m-0
+        figure.card-file.m-0(class= bgImage)
             div.card-flex.d-flex
                 div.card-file__flex
                     svg.card-file__svg 

@@ -11,7 +11,7 @@ block content
         div.cointainer-card
             div.container.border-bottom
                 div.row.m-0
-                    div.col
+                    div.col.mt-3
                         div.section
                             section.about-company
                                 h2.about-company__title.text-uppercase.text-secondary-emphasis.mb-3.fs-2 Про нашу компанію 
@@ -85,7 +85,7 @@ block content
                             span.banner-description__client.text-secondary.justify-content-center.d-flex клієнт
                             div.text-center
                                 img.banner-description__img(src="img/man.png", alt="")
-        div.card-section.d-flex.justify-content-center
+        div.card-section.d-flex.justify-content-center.pb-4
             section.card-offers.text-center
                 h2.card-offers__title.text-uppercase.text-success-emphasis Спеціальні пропозиції тижня
                 i.card-offers__inf.text-success-emphasis Гарячі праозиції, по-швидше обирай і поїхали! 
@@ -98,7 +98,9 @@ block content
                     "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
                     "2599 грн.",
                     "замовити",
-                    "#"
+                    "#",
+                    true,
+                    false
                 ) 
                 +card(
                     "img/bike-tour.jpg",
@@ -107,7 +109,9 @@ block content
                     "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
                     "555 грн.",
                     "замовити",
-                    "#"
+                    "#", 
+                    true,
+                    true
                 ) 
                 +card(
                     "img/islands.jpg",
@@ -116,7 +120,9 @@ block content
                     "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
                     "1559 грн.",
                     "замовити",
-                    "#"
+                    "#", 
+                    true,
+                    false
                 )
                 +card(
                     "img/surfing.jpg",
@@ -125,30 +131,36 @@ block content
                     "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
                     "999 грн",
                     "замовити",
-                    "#"
+                    "#",
+                    true,
+                    false
                 )
         div.additional-info 
             div.container 
                 div.row 
-                    div.col.mt-5 
+                    div.col-12.col-sm-5.col-lg-3.col-xl-3.mt-5 
                         h2.additional-info__title.text-uppercase.fs-2.text-success-emphasis додаткова інформація 
                     +additionalInfo(
+                        "graph",
                         "Графік роботи готелів.xls", 
                         "Розмір файла: 10Mb", 
                         "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
                         "скачати"
                     ) 
                     +additionalInfo(
+                        "food",
                         "Інформація про харчування.xls",
                         "Розмір файла: 10Mb", 
                         "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
                         "скачати"
                     )
-                    div.col-12.col-sm-5.col-lg-3.text-center.mt-5
+                    div.col-12.col-sm-5.col-lg-4.col-xl-3.text-center.mt-5
                         div.question-info.d-inline-block 
-                            h3.question-info__title.fs-6.text-success-emphasis задати питання 
-                            p.question-info__description.m-0.text-secondary.pt-3.pb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
-                            a.question-info__phone.text-info.text-decoration-none(href="tel:+380505698511") +38 (050) 56 98 511 
+                            h3.question-info__title.fs-6.text-success-emphasis.position-absolute.top-0.start-50 задати питання 
+                            p.question-info__description.m-0.text-secondary.pt-5.pb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
+                            a.question-info__phone.text-decoration-none(href="tel:+380505698511") +38 (050) 56 98 511
+                                svg.question-info__phone-svg
+                                    use(xlink:href="#phone") 
                             p.question-info__name-info.m-0.text-success-emphasis.pt-3 Анна Миколаївна 
                             span.question-info__span.text-secondary.d-block консультант 
-                            img(src="img/woman.png", alt="Жінка")
+                            img.question-info__woman(src="img/woman.png", alt="Жінка")
