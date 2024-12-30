@@ -19,6 +19,17 @@
     width: 100%
     margin: 300px 0 0
 
+.sea-adventures__button
+    border: 1px solid $color-write
+    color: #fff
+    padding: 10px 38px
+    background: $color-write
+
+.sea-adventures__button:hover  
+    background: #fff
+    border: 1px solid #0099ff 
+    color: #0099ff
+
 .sea-adventures__span 
     position: relative
 
@@ -54,17 +65,6 @@
 .sea-adventures__title
     font-size: 72px
 
-.sea-adventures__button
-    border: 1px solid $color-write
-    color: #fff
-    padding: 10px 38px
-    background: $color-write
-
-.sea-adventures__button:hover  
-    background: #fff
-    border: 1px solid #0099ff 
-    color: #0099ff
-
 .travel-plan 
     padding: 350px 0 0
 
@@ -74,4 +74,10 @@
 .travel-plan__scroll-icon
     margin: 35px 0 0
     width: 45px
-    height: 45px
+    height: 45px 
+    transition: .3s
+
+.travel-plan__scroll-icon:hover 
+    transform: translateY(10px)
+    width: 55px
+    height: 55px
