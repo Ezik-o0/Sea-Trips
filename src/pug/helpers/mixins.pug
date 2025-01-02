@@ -2,7 +2,7 @@
 
 mixin card(imageSrc, imageAlt, title, description, price, buttonText, linkHref, special, border) 
     div.col-12.col-sm-6.col-lg-4.col-xl-3
-        div.card.w-20.border-0.bg-transparent(class= special ? 'special' : '')
+        div.card.crd.w-20.border-0.bg-transparent(class= special ? 'special' : '')
             img.card__lg.card-img-top(src=imageSrc, alt=imageAlt, class= border ? 'border' : '')
             div.card-body
                 h5.card__title.text-success-emphasis= title

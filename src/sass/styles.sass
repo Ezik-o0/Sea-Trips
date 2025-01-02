@@ -49,6 +49,7 @@ body
     background: #fff
     border: 1px solid #0099ff 
     color: #0099ff
+    transition: .3s
 
 .description__detail
     background: #fff
@@ -60,16 +61,26 @@ body
     border: 1px solid $color-write
     color: #fff
     background: $color-write
+    transition: .3s
+
+.crd
+    min-height: 415px !important
 
 .card:hover 
     background: #fff !important
     
+// .card__description
+//     height: 50% !important
+
 .card-picture
     padding: 30px 20px
 
 .card-picture,
 .card-body
     position: relative
+
+.card-body 
+    display: inline-grid
 
 .card-picture.no-image::before,
 .card-picture.no-image::after
@@ -153,7 +164,7 @@ body
     
 .card__price 
     display: inline-block
-    min-width: 95px
+    min-width: 96px
 
 .card__link
     min-width: 115px
@@ -262,6 +273,7 @@ body
 .card-file__link:hover 
     border: 2px solid #ffb700
     background-color: rgba(255, 186, 0, 0.3)
+    transition: .3s
 
 .card-file__link
     margin: 20px 0 0
